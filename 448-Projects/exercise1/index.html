@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Validator</title>
+    </head>
+    <body>
+        <h1>Enter First Password</h1>
+        <input id="p1"></input>
+        <h1>Enter Second Password</h1>
+        <input id="p2"></input>
+        <button id="validate">Validate</button>
+        <script>
+            let p1 = document.querySelector("#p1");
+            let p2 = document.querySelector("#p2");
+            let validateButton = document.querySelector("#validate");
+            validateButton.addEventListener("click", () => {
+                if (p1.value !== p2.value) {
+                    alert("Passwords do not match!");
+                    return;
+                }
+                if (p1.value.length < 8) {
+                    alert("Password is not long enough (8 character minimum)!");
+                    return;
+                }
+                alert("Password Validated!");
+            })
+        </script>
+    </body>
+</html>

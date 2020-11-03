@@ -1,0 +1,36 @@
+.siteLink:hover {
+    color: red;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+body {
+    background-image: url("public/background.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-color: #02182b;
+}
+
+* {
+    color: #89daff;
+    font-family: Courier, monospace;
+    font-size: large;
+}
+
+#title {
+    font-size: 2.0rem;
+}
+
+#photo {
+    height: 300px;
+    margin-left: 20%;
+}
+
+#photo:hover {
+    height: 450px;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
