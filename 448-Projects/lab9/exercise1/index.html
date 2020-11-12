@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <h1>Multiplication Table</h1>
+    <?php
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+        echo "<table>";
+        for ($row = 0; $row < 101; $row++) {
+            echo "<tr>";
+            for ($column = 0; $column < 101; $column++) {
+                if ($row == 0 && $column == 0) {
+                    echo "<td> </td>";
+                    continue;
+                }
+                if ($row == 0) {
+                    echo "<td>$column</td>";
+                    continue;
+                }
+                if ($column == 0) {
+                    echo "<td>$row</td>";
+                    continue;
+                }
+                $val = $row * $column;
+                echo "<td>$val</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
+    ?>
+    <div style="display: flex; flex-direction: column;">
+        <hr />
+        <a style="color: black; background-color: white;" href="../../../index.html">Homepage</a>
+    </div>
+</body>
+
+</html>

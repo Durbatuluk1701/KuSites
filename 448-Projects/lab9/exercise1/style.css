@@ -1,0 +1,7 @@
+table {
+    border: 1px solid black;
+}
+
+td {
+    border: 0.5px dashed grey;
+}
