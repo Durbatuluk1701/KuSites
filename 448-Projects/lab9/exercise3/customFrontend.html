@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web Store</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <h1 id="header">Web Store</h1>
+    <form id="store" onsubmit="return validate();" action="customBackend.php" method="post"
+        style="display: flex; flex-direction: column;">
+        <!-- Username -->
+        <h3>User Info:</h3>
+        <div class="block">
+            <label for="username">Username: </label>
+            <input required id="username" type="email" name="username" />
+            <label for="password">Password: </label>
+            <input required type="password" id="password" name="password" />
+        </div>
+        <h3>Shopping:</h3>
+        <div class="block">
+            <h4>Hamburger: Price $5</h4>
+            <div class="block">
+                <label for="hamburger">Quantity: </label>
+                <input type="text" id="hamburger" name="hamburger" value="0" />
+            </div>
+            <h4>Fries: Price $3</h4>
+            <div class="block">
+                <label for="fries">Quantity: </label>
+                <input type="text" id="fries" name="fries" value="0" />
+            </div>
+            <h4>Coke: Price $2</h4>
+            <div class="block">
+                <label for="coke">Quantity: </label>
+                <input type="text" id="coke" name="coke" value="0" />
+            </div>
+        </div>
+        <h3>Shipping</h3>
+        <div class="block">
+            <input required type="radio" id="sevenDay" name="shipping" value="7">
+            <label for="sevenDay">Free 7 Day</label><br />
+            <input required type="radio" id="threeDay" name="shipping" value="3">
+            <label for="threeDay">$5.00 three day</label><br />
+            <input required type="radio" id="oneDay" name="shipping" value="1">
+            <label for="oneDay">$50.00 over night</label><br />
+        </div>
+        <div class="block">
+            <input id="reset" type="reset" value="Reset" />
+            <input id="submit" type="submit" value="Submit Order" />
+        </div>
+
+    </form>
+    <script src="formChecker.js"></script>
+    <div style="display: flex; flex-direction: column;">
+        <hr />
+        <a style="color: black; background-color: white;" href="../../../index.html">Homepage</a>
+    </div>
+</body>
+
+</html>

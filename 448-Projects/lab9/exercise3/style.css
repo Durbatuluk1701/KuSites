@@ -1,0 +1,24 @@
+body {
+    background-color: #d08050;
+}
+
+* {
+    margin: 0px 0px;
+}
+
+.block {
+    margin: 10px auto;
+    width: 90%;
+}
+
+#header {
+    margin: 0px auto;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    background-color: yellow;
+}
+
+#submit {
+    width: 25%;
+}
