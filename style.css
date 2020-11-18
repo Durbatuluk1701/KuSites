@@ -17,20 +17,13 @@
 }
 
 a {
-    width: 25%;
+    width: auto;
     text-align: center;
     background-color: inherit;
     text-decoration: none;
     border: 1.5px solid aqua;
     border-radius: 50%;
     padding-top: 0.35rem;
-}
-
-#links448 {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 2rem;
 }
 
 a:hover {
@@ -47,4 +40,8 @@ a:hover {
 
 .four48 {
     background-color: #70C6FF;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
 }
