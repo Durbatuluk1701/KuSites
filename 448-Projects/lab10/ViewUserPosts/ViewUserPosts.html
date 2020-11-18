@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SQL: View Posts Interface</title>
+</head>
+
+<body>
+    <h1>SQL: View Posts Interface</h1>
+    <form action="ViewUserPosts.php" method="POST">
+        <label for="usedId">Choose User:</label>
+        <?php
+        $mysqli = new mysqli("mysql.eecs.ku.edu", "willthomas", "ANahy9ui", "willthomas");
+        if ($mysqli->connect_error) {
+            die("Connect Failed: ". $mysqli->connect_error);
+        }
+        $result = $mysqli->query("SELECT * FROM Users;");
+        echo "<select required name='userId' id='userId'>";
+        while ($row = $result->fetch_row()) {
+            $val = $row[0];
+            echo "
+                <option value='$val'>$val</option>
+            ";
+        }
+        echo "</select>";
+
+        $result->free();
+
+        $mysqli->close();
+        ?>
+        <br />
+        <input type="submit" value="View Posts" />
+    </form>
+    <a href="../AdminHome.html">Admin</a>
+</body>
+
+</html>

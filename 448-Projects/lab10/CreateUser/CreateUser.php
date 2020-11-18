@@ -31,4 +31,6 @@ if ($result->fetch_row()[0]) {
     echo "<h3>Successfull Inserted '" . $userId . "' into Database</h3>";
 }
 
+$mysqli->close();
+
 ?>
