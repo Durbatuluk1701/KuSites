@@ -15,11 +15,8 @@ $checkQuery = "select * from Users where user_id = \"$userId\";";
 
 $insertQuery = "INSERT INTO Users (user_id) values (\"$userId\");";
 
-// echo $insertQuery;
-// echo $checkQuery;
-
 $result = $mysqli->query($checkQuery);
-// echo $result2;
+
 echo "<h1>Database Response</h1>";
 if ($result->fetch_row()[0]) {
     // Already in DB
@@ -30,6 +27,8 @@ if ($result->fetch_row()[0]) {
     $mysqli->query($insertQuery);
     echo "<h3>Successfull Inserted '" . $userId . "' into Database</h3>";
 }
+
+$result->free();
 
 $mysqli->close();
 

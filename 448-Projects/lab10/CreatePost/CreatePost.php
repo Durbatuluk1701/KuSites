@@ -34,6 +34,8 @@ if ($existingUser) {
     echo "<h3>New Post added for '$userId'</h3>";
 }
 
+$result->free();
+
 $mysqli->close();
 
 ?>

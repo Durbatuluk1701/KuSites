@@ -32,6 +32,8 @@ echo "</table>";
 
 echo "<a href='../AdminHome.html'>Admin</a>";
 
+$result->free();
+
 $mysqli->close();
 
 ?>
