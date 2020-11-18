@@ -1,0 +1,21 @@
+a {
+    background-color: turquoise;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: large;
+}
+
+a:hover {
+    color: blue;
+}
+
+* {
+    background-color: aliceblue;
+}
+
+#adminLinks {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
